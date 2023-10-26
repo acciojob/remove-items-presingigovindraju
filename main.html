@@ -20,7 +20,27 @@
 			<button onclick="deleteMe()">Select and Remove</button>
 		</form>
 
-		<script type="text/javascript" src="./script.js">
+		<script >
+			function deleteMe(){
+	const select = document.querySelector("select");
+	let selectValue = select.value;
+	let options = select.children;
+	for(let i = 0 ; i < options.length ;i++){
+		if(options[i].value == select.value){
+			options[i].remove();
+			break;
+		}
+	}
+}
+			// function deleteMe() {
+   //      const select = document.querySelector("#colorSelect");
+   //      let selectedOption = select.options[select.selectedIndex];
+
+   //      if (selectedOption) {
+   //          selectedOption.remove();
+			// break;
+   //      }
+   //  }
 		</script>
 
 	</body>
