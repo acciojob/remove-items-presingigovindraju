@@ -1,52 +1,4 @@
-<!DOCTYPE html>
-<!-- <html>
-	<head>
-		<style type="text/css"> 
-			body {margin: 30px;} 
-		</style>  
-		<meta charset=utf-8 /> 
-		<title>Remove items from a dropdown list</title>
-	</head>
 
-	<body>
-		<form> 
-			<select id="colorSelect"> 
-				<option>Red</option> 
-				<option>Green</option> 
-				<option>White</option> 
-				<option>Black</option> 
-			</select> 
-<!-- 			<input type="button" value="Select and Remove"> -->
-<!-- 			<button onclick="deleteMe()">Select and Remove</button>
-		</form>
-
-		<script >
-			function deleteMe(){
-	const select = document.querySelector("select");
-	let selectValue = select.value;
-	let options = select.children;
-	for(let i = 0 ; i < options.length ;i++){
-		if(options[i].value == select.value){
-			options[i].remove();
-			break;
-		}
-	}
-} -->
-			// function deleteMe() {
-   //      const select = document.querySelector("#colorSelect");
-   //      let selectedOption = select.options[select.selectedIndex];
-
-   //      if (selectedOption) {
-   //          selectedOption.remove();
-			// break;
-   //      }
-   //  }
-<!-- 		</script>
-
-	</body>
-
-</html> --> -->
-<!DOCTYPE html>
 <html>
 <head>
     <style type="text/css">
@@ -63,18 +15,21 @@
             <option>White</option>
             <option>Black</option>
         </select>
-        <button onclick="deleteMe()">Select and Remove</button>
-    </form>
-
+<!--         <button onclick="deleteMe()">Select and Remove</button> -->
+       <input type="button" onclick="deleteMe()" value="Select and Remove"/>
+	</form>
     <script>
         function deleteMe() {
-            const select = document.querySelector("#colorSelect");
-            let selectedOption = select.options[select.selectedIndex];
-
-            if (selectedOption) {
-                selectedOption.remove();
-            }
+        const select = document.querySelector("select");
+        const selectedValue = select.value ;
+        let option = select.children;
+        for(let i=0 ; i < option.length;i++){
+          if(option[i].value === selectedValue){
+            option[i].remove();
+            break;
+          }
         }
+    }
     </script>
 </body>
 </html>
