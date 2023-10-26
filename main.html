@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<!-- <html>
 	<head>
 		<style type="text/css"> 
 			body {margin: 30px;} 
@@ -17,7 +17,7 @@
 				<option>Black</option> 
 			</select> 
 <!-- 			<input type="button" value="Select and Remove"> -->
-			<button onclick="deleteMe()">Select and Remove</button>
+<!-- 			<button onclick="deleteMe()">Select and Remove</button>
 		</form>
 
 		<script >
@@ -31,7 +31,7 @@
 			break;
 		}
 	}
-}
+} -->
 			// function deleteMe() {
    //      const select = document.querySelector("#colorSelect");
    //      let selectedOption = select.options[select.selectedIndex];
@@ -41,8 +41,40 @@
 			// break;
    //      }
    //  }
-		</script>
+<!-- 		</script>
 
 	</body>
 
+</html> --> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        body { margin: 30px; }
+    </style>
+    <meta charset="utf-8">
+    <title>Remove items from a dropdown list</title>
+</head>
+<body>
+    <form>
+        <select id="colorSelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Black</option>
+        </select>
+        <button onclick="deleteMe()">Select and Remove</button>
+    </form>
+
+    <script>
+        function deleteMe() {
+            const select = document.querySelector("#colorSelect");
+            let selectedOption = select.options[select.selectedIndex];
+
+            if (selectedOption) {
+                selectedOption.remove();
+            }
+        }
+    </script>
+</body>
 </html>
